@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Nabil Portfolio</title>
+    <meta name="description" content="Contacta con Nabil para proyectos web, colaboraciones o cualquier consulta.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <div class="navbar__logo">N<span>.</span>Portfolio</div>
+        <ul class="navbar__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li><a href="contacto.html" class="navbar__cta">Contratarme</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- ── PAGE HERO ── -->
+        <div style="background:var(--bg-subtle); border:none; border-radius:0; box-shadow:none; margin:0; animation:none; padding: 6rem 2rem 3rem; text-align:center; border-bottom: 1px solid var(--border);">
+            <span class="section-label">¿Hablamos?</span>
+            <h1 class="page-hero__title fade-up">Trabajemos juntos</h1>
+            <p class="page-hero__sub fade-up delay-1">Estoy abierto a nuevas oportunidades, proyectos freelance y colaboraciones con equipos que busquen calidad.</p>
+        </div>
+
+        <!-- ── CONTACT SECTION ── -->
+        <section class="contact-section" style="border:none; border-radius:0; box-shadow:none; margin:0; animation:none; background:transparent;">
+            <div class="container" style="background:transparent; border:none; box-shadow:none; border-radius:0; animation:none; display:block;">
+                <div class="contact-grid">
+
+                    <!-- LEFT: info -->
+                    <div>
+                        <h2 class="contact-info__title">Cuéntame tu proyecto</h2>
+                        <p class="contact-info__sub">
+                            Ya sea una web desde cero, una mejora de diseño o simplemente quieres conocerme mejor antes de contratar. Respondo en menos de 24 horas.
+                        </p>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">📧</div>
+                            <div>
+                                <div class="contact-detail__label">Email</div>
+                                <div class="contact-detail__value">nabil@portfolio.dev</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">📍</div>
+                            <div>
+                                <div class="contact-detail__label">Ubicación</div>
+                                <div class="contact-detail__value">España — Trabajo remoto global</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">💼</div>
+                            <div>
+                                <div class="contact-detail__label">Disponibilidad</div>
+                                <div class="contact-detail__value">Proyectos freelance · Prácticas · Junior</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <div class="contact-detail__icon">⏱️</div>
+                            <div>
+                                <div class="contact-detail__label">Tiempo de respuesta</div>
+                                <div class="contact-detail__value">Menos de 24 horas</div>
+                            </div>
+                        </div>
+
+                        <!-- Quick fact card -->
+                        <div class="card" style="margin-top: 2.5rem; background: var(--text-primary); color: #fff; border: none;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.75rem;">💡</div>
+                            <h4 style="font-family: var(--font-heading); font-size: 1rem; font-weight:700; margin-bottom:0.5rem;">¿Por qué contactarme?</h4>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7;">
+                                Aporto una visión fresca, ganas de aprender y un compromiso real con cada proyecto. No entrego trabajo a medias.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: form -->
+                    <div class="contact-form fade-up delay-1">
+                        <h3>Envíame un mensaje</h3>
+                        <form action="#" onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="¿De qué se trata?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">Tipo de proyecto</label>
+                                <select id="tipo" name="tipo">
+                                    <option value="">Selecciona una opción...</option>
+                                    <option value="web">Desarrollo web</option>
+                                    <option value="diseno">Diseño UI/UX</option>
+                                    <option value="freelance">Proyecto freelance</option>
+                                    <option value="practicas">Oferta de prácticas</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Cuéntame tu idea, proyecto o propuesta con el mayor detalle posible..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">Enviar mensaje →</button>
+                        </form>
+                        <div id="form-success" style="display:none; margin-top:1.5rem; padding:1rem 1.5rem; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:12px; color:#15803d; font-weight:600; font-size:0.95rem;">
+                            ✅ ¡Mensaje enviado! Me pondré en contacto pronto.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer__logo">N<span>.</span>Portfolio</div>
+        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
+        <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 Nabil. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.querySelector('#form-success').style.display = 'block';
+            e.target.reset();
+            setTimeout(() => {
+                document.querySelector('#form-success').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>

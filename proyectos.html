@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos — Nabil Portfolio</title>
+    <meta name="description" content="Proyectos y trabajos realizados por Nabil. Desarrollo web, diseño UI y más.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-light);
+        }
+
+        .project-card__thumb {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            background: var(--bg-subtle);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-card__body {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card__tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 0.2rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .project-card__title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .project-card__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card__footer {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .project-link:hover { color: var(--accent-dark); }
+
+        .project-link--ghost {
+            color: var(--text-muted);
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1.5px solid var(--border);
+            border-radius: 100px;
+            padding: 0.45rem 1.2rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--text-primary);
+            color: #fff;
+            border-color: var(--text-primary);
+        }
+
+        .wip-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #fef3c7;
+            border: 1px solid #fde68a;
+            border-radius: 100px;
+            padding: 0.2rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <div class="navbar__logo">N<span>.</span>Portfolio</div>
+        <ul class="navbar__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html" class="active">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="contacto.html" class="navbar__cta">Contratarme</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <div style="background:var(--bg-subtle); border-bottom:1px solid var(--border); padding:6rem 2rem 3.5rem; text-align:center;">
+            <span class="section-label">Mi trabajo</span>
+            <h1 class="page-hero__title fade-up">Proyectos</h1>
+            <p class="page-hero__sub fade-up delay-1">Una selección de proyectos académicos y personales que reflejan mi evolución como desarrollador.</p>
+        </div>
+
+        <!-- PROJECTS -->
+        <section style="padding:5rem 0; border:none; border-radius:0; box-shadow:none; margin:0; background:transparent; animation:none;">
+            <div class="container" style="background:transparent; border:none; box-shadow:none; border-radius:0; animation:none; display:block;">
+
+                <!-- Filter bar -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
+                    <button class="filter-btn" onclick="filterProjects('web', this)">Web</button>
+                    <button class="filter-btn" onclick="filterProjects('diseño', this)">Diseño</button>
+                    <button class="filter-btn" onclick="filterProjects('bbdd', this)">Base de Datos</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card fade-up" data-category="web">
+                        <div class="project-card__thumb">🌐</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <h3 class="project-card__title">Portfolio Personal</h3>
+                            <p class="project-card__desc">
+                                Este mismo portfolio. Diseñado y desarrollado desde cero con un sistema de diseño propio, arquitectura multi-página y un enfoque "mobile-first".
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card fade-up delay-1" data-category="web diseño">
+                        <div class="project-card__thumb">🏎️</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Diseño UI</span>
+                            </div>
+                            <h3 class="project-card__title">Landing Page — Automoción</h3>
+                            <p class="project-card__desc">
+                                Página de presentación temática sobre ingeniería automovilística. Glassmorphism, animaciones de entrada y paleta de color editorial cuidada.
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-up delay-2" data-category="bbdd">
+                        <div class="project-card__thumb">🗄️</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">MySQL</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                            <h3 class="project-card__title">Sistema de Gestión de Clientes</h3>
+                            <p class="project-card__desc">
+                                Diseño de una base de datos relacional normalizada (3FN) para la gestión de clientes, pedidos e inventario de un negocio ficticio.
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card fade-up" data-category="diseño">
+                        <div class="project-card__thumb">🎨</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Diseño UI</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <h3 class="project-card__title">Sistema de Diseño — Componentes UI</h3>
+                            <p class="project-card__desc">
+                                Librería de componentes CSS reutilizables: botones, tarjetas, tipografía, formularios y sistema de grid. Documentado y listo para producción.
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card fade-up delay-1" data-category="web">
+                        <div class="project-card__thumb">📋</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                                <span class="wip-badge">⏳ En progreso</span>
+                            </div>
+                            <h3 class="project-card__title">Gestor de Tareas — Web App</h3>
+                            <p class="project-card__desc">
+                                Aplicación web de gestión de tareas con categorías, prioridades y almacenamiento en localStorage. Interfaz minimalista y funcional.
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card fade-up delay-2" data-category="web diseño">
+                        <div class="project-card__thumb">🧾</div>
+                        <div class="project-card__body">
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <h3 class="project-card__title">Maquetación — Lenguaje de Marcas</h3>
+                            <p class="project-card__desc">
+                                Serie de ejercicios de maquetación avanzada: tablas complejas, formularios accesibles, posicionamiento CSS y layouts con Flexbox y Grid.
+                            </p>
+                            <div class="project-card__footer">
+                                <a href="#" class="project-link">Ver proyecto →</a>
+                                <a href="#" class="project-link project-link--ghost">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section style="background:var(--text-primary); padding:5rem 2rem; text-align:center; border:none; border-radius:0; box-shadow:none; margin:0; animation:none;">
+            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent-light); margin-bottom:1rem; display:block;">¿Tienes un proyecto en mente?</span>
+            <h2 style="font-family:var(--font-heading); font-size:clamp(1.6rem, 3vw, 2.5rem); font-weight:700; color:#fff; letter-spacing:-0.02em; margin-bottom:1rem;">Trabajemos juntos</h2>
+            <p style="color:rgba(255,255,255,0.55); max-width:480px; margin:0 auto 2.5rem; line-height:1.7; font-size:1.05rem;">Estoy disponible para proyectos freelance, prácticas y posiciones junior en equipos que valoren la calidad.</p>
+            <a href="contacto.html" class="btn" style="background:var(--accent); color:#fff; font-family:var(--font-heading);">Contáctame ahora →</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__logo">N<span>.</span>Portfolio</div>
+        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
+        <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 Nabil. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function filterProjects(cat, btn) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                const categories = card.dataset.category || '';
+                if (cat === 'all' || categories.includes(cat)) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeUp 0.4s ease-out forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

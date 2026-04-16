@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí — Nabil Portfolio</title>
+    <meta name="description" content="Conoce a Nabil: estudiante de desarrollo web, apasionado del diseño y la ingeniería automovilística.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <div class="navbar__logo">N<span>.</span>Portfolio</div>
+        <ul class="navbar__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="contacto.html" class="navbar__cta">Contratarme</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- ── PAGE HERO ── -->
+        <div class="page-hero" style="background: none; border-bottom: 1px solid var(--border); box-shadow: none; border-radius: 0; animation: none; margin: 0; padding: 6rem 2rem 3rem;">
+            <span class="section-label">Mi historia</span>
+            <h1 class="page-hero__title fade-up">Sobre mí</h1>
+            <p class="page-hero__sub fade-up delay-1">Diseño, código, velocidad y precisión. Cuatro pilares que definen todo lo que hago.</p>
+        </div>
+
+        <!-- ── BIO SECTION ── -->
+        <section class="passion-section" style="border: none; border-radius: 0; box-shadow: none; margin: 0; background: transparent; animation: none;">
+            <div class="container" style="background: transparent; border:none; box-shadow:none; border-radius:0; animation:none; display:block;">
+                <div class="passion-grid">
+                    <div>
+                        <span class="passion-label">¿Quién soy?</span>
+                        <h2 class="passion-title">Hola, soy Nabil —<br>desarrollador y entusiasta<br>de la ingeniería.</h2>
+                        <p class="passion-text">
+                            Tengo una mentalidad orientada al detalle y la calidad. Creo firmemente que la tecnología, bien aplicada, puede transformar cómo las personas experimentan el mundo digital.
+                        </p>
+                        <p class="passion-text">
+                            Actualmente curso el ciclo formativo de <strong>Desarrollo de Aplicaciones Web (DAW)</strong>, donde me especializo en la creación de interfaces modernas, accesibles y con un diseño que se comunica sólo.
+                        </p>
+                        <p class="passion-text">
+                            Fuera del código, me muevo por el mundo del motor y la ingeniería de alta precisión, que me ha enseñado a ver la belleza en los sistemas bien diseñados.
+                        </p>
+                        <div class="spec-pills">
+                            <span class="pill">HTML5 / CSS3</span>
+                            <span class="pill">JavaScript</span>
+                            <span class="pill">Diseño UI</span>
+                            <span class="pill">Git</span>
+                            <span class="pill">MySQL</span>
+                            <span class="pill">Responsive</span>
+                        </div>
+                    </div>
+
+                    <!-- Profile card side -->
+                    <div>
+                        <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                            <div style="width:100px; height:100px; background: var(--bg-subtle); border-radius:50%; margin: 0 auto 1.5rem; display:flex; align-items:center; justify-content:center; font-size:2.8rem;">🧑‍💻</div>
+                            <h3 style="font-family: var(--font-heading); font-size:1.5rem; font-weight:700; margin-bottom:0.5rem;">Nabil</h3>
+                            <p style="color: var(--accent); font-weight:600; font-size:0.9rem; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:0.08em;">Desarrollador Web en Formación</p>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem; text-align:left;">
+                                <div style="padding:1rem; background:var(--bg-subtle); border-radius:12px;">
+                                    <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Ubicación</div>
+                                    <div style="font-weight:600; font-size:0.9rem;">España 🇪🇸</div>
+                                </div>
+                                <div style="padding:1rem; background:var(--bg-subtle); border-radius:12px;">
+                                    <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Estado</div>
+                                    <div style="font-weight:600; font-size:0.9rem; color: #22a06b;">● Disponible</div>
+                                </div>
+                                <div style="padding:1rem; background:var(--bg-subtle); border-radius:12px;">
+                                    <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Idiomas</div>
+                                    <div style="font-weight:600; font-size:0.9rem;">ES · CA · EN</div>
+                                </div>
+                                <div style="padding:1rem; background:var(--bg-subtle); border-radius:12px;">
+                                    <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.3rem;">Intereses</div>
+                                    <div style="font-weight:600; font-size:0.9rem;">Motor · Tech</div>
+                                </div>
+                            </div>
+                            <a href="contacto.html" class="btn btn-primary" style="margin-top:2rem; width:100%; justify-content:center;">Contactar →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PASSION SECTION ── -->
+        <section style="background: var(--bg-subtle); padding: 7rem 0; border: none; border-radius: 0; box-shadow: none; margin: 0; animation: none;">
+            <div class="container" style="background:transparent; border:none; box-shadow:none; border-radius:0; animation:none; display:block;">
+                <div class="passion-grid">
+
+                    <!-- Visual side: two stacked cards -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="background: #1e1e2e; border-radius: 20px; padding: 2rem; color: #f8f8f2; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8;">
+                            <div style="display:flex; gap:0.5rem; margin-bottom:1.2rem;">
+                                <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                                <span style="width:11px;height:11px;border-radius:50%;background:#ffbd2e;display:inline-block;"></span>
+                                <span style="width:11px;height:11px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                            </div>
+                            <div><span style="color:#6272a4;">// passions.config</span></div>
+                            <div><span style="color:#ff79c6;">export</span> <span style="color:#ff79c6;">const</span> <span style="color:#8be9fd;">passions</span> <span style="color:#f8f8f2;">= [</span></div>
+                            <div style="padding-left:1.2rem;"><span style="color:#f1fa8c;">"Mundo del motor"</span><span style="color:#f8f8f2;">,</span></div>
+                            <div style="padding-left:1.2rem;"><span style="color:#f1fa8c;">"Ingeniería mecánica"</span><span style="color:#f8f8f2;">,</span></div>
+                            <div style="padding-left:1.2rem;"><span style="color:#f1fa8c;">"Desarrollo de software"</span><span style="color:#f8f8f2;">,</span></div>
+                            <div style="padding-left:1.2rem;"><span style="color:#f1fa8c;">"Diseño UI/UX"</span></div>
+                            <div><span style="color:#f8f8f2;">];</span></div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏎️</div>
+                                <div style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Motor</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Velocidad & precisión</div>
+                            </div>
+                            <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;">💻</div>
+                                <div style="font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem;">Informática</div>
+                                <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Código & diseño</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text side -->
+                    <div>
+                        <span class="passion-label">Lo que me mueve</span>
+                        <h2 class="passion-title">Motor e informática:<br>dos mundos, una misma<br>mentalidad.</h2>
+                        <p class="passion-text">
+                            Desde que tengo memoria, he sentido una atracción especial por los sistemas complejos que funcionan con precisión. En el <strong>mundo del motor</strong>, eso se traduce en la fascinación por la ingeniería mecánica: cómo cada componente está diseñado para trabajar en armonía, desde la culata hasta el chasis, para ofrecer el máximo rendimiento posible.
+                        </p>
+                        <p class="passion-text">
+                            Esa misma filosofía es la que aplico a la <strong>informática y el desarrollo web</strong>. Un buen código, como un buen motor, tiene que ser limpio, eficiente y fiable. Me apasiona entender cómo funcionan las cosas por dentro, y luego construirlas de manera que también sean bellas por fuera.
+                        </p>
+                        <p class="passion-text">
+                            Ambas disciplinas comparten algo fundamental: la atención al detalle marca la diferencia. Un milímetro en una pieza mecánica, un pixel en una interfaz. Es esa búsqueda constante de la <strong>perfección técnica y estética</strong> lo que define mi enfoque profesional.
+                        </p>
+                        <div class="spec-pills">
+                            <span class="pill">Ingeniería mecánica</span>
+                            <span class="pill">Tuning & modificaciones</span>
+                            <span class="pill">Desarrollo frontend</span>
+                            <span class="pill">Diseño de sistemas</span>
+                            <span class="pill">Rendimiento & optimización</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ── VALUES ── -->
+        <section class="services-section" style="border: none; border-radius: 0; box-shadow: none; margin: 0; animation: none; background: transparent;">
+            <div class="container" style="background:transparent; border:none; box-shadow:none; border-radius:0; animation:none; display:block;">
+                <div class="section-header">
+                    <span class="section-label">Lo que me define</span>
+                    <h2 class="section-title">Mis Valores Profesionales</h2>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card__icon">🎯</div>
+                        <h3 class="card__title">Orientación al Detalle</h3>
+                        <p class="card__text">Como en el mundo del motor, los pequeños detalles marcan la diferencia entre algo bueno y algo excelente. Cada píxel importa.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">📚</div>
+                        <h3 class="card__title">Aprendizaje Continuo</h3>
+                        <p class="card__text">La tecnología evoluciona rápido. Me adapto a nuevos lenguajes, frameworks y metodologías con curiosidad y disciplina.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card__icon">🤝</div>
+                        <h3 class="card__title">Trabajo en Equipo</h3>
+                        <p class="card__text">Los mejores proyectos nacen de la colaboración. Me comunico con claridad y aporto ideas desde la escucha activa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer__logo">N<span>.</span>Portfolio</div>
+        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
+        <ul class="footer__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 Nabil. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

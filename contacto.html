@@ -15,8 +15,11 @@
 
     <!-- ── NAVBAR ── -->
     <nav class="navbar">
-        <div class="navbar__logo">N<span>.</span>Portfolio</div>
-        <ul class="navbar__links">
+        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links" id="navLinks">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="sobre-mi.html">Sobre mí</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
@@ -28,7 +31,7 @@
     <main>
 
         <!-- ── PAGE HERO ── -->
-        <div style="background:var(--bg-subtle); border:none; border-radius:0; box-shadow:none; margin:0; animation:none; padding: 6rem 2rem 3rem; text-align:center; border-bottom: 1px solid var(--border);">
+        <div class="page-hero">
             <span class="section-label">¿Hablamos?</span>
             <h1 class="page-hero__title fade-up">Trabajemos juntos</h1>
             <p class="page-hero__sub fade-up delay-1">Estoy abierto a nuevas oportunidades, proyectos freelance y colaboraciones con equipos que busquen calidad.</p>
@@ -148,6 +151,22 @@
     </footer>
 
     <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks  = document.getElementById('navLinks');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.classList.toggle('open', isOpen);
+                navToggle.setAttribute('aria-expanded', isOpen);
+            });
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    navLinks.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
         function handleSubmit(e) {
             e.preventDefault();
             document.querySelector('#form-success').style.display = 'block';

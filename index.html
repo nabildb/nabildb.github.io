@@ -20,8 +20,11 @@
 
     <!-- ── NAVBAR ── -->
     <nav class="navbar">
-        <div class="navbar__logo">N<span>.</span>Portfolio</div>
-        <ul class="navbar__links">
+        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links" id="navLinks">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="sobre-mi.html">Sobre mí</a></li>
             <li><a href="proyectos.html">Proyectos</a></li>
@@ -213,6 +216,23 @@
         <p class="footer__copy">&copy; 2026 Nabil. Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks  = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 
 </html>

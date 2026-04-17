@@ -106,11 +106,7 @@
                     <!-- RIGHT: form -->
                     <div class="contact-form fade-up delay-1">
                         <h3>Envíame un mensaje</h3>
-                        <form action="https://formsubmit.co/nabildaiday1@gmail.com" method="POST">
-                            <!-- Evita el captcha (opcional) -->
-                            <input type="hidden" name="_captcha" value="false">
-                            <!-- Te redirige a tu web después de enviar -->
-                            <input type="hidden" name="_next" value="https://nabildb.github.io/contacto.html">
+                        <form action="#" onsubmit="handleSubmit(event)">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="nombre">Nombre</label>
@@ -186,12 +182,42 @@
                 });
             });
         }
-        // La función handleSubmit ya no es necesaria porque Formsubmit gestiona el envío
-        /*
         function handleSubmit(e) {
-            ...
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('.form-submit');
+            const originalText = btn.textContent;
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch("https://formsubmit.co/ajax/nabildaiday1@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.querySelector('#form-success').style.display = 'block';
+                e.target.reset();
+                setTimeout(() => {
+                    document.querySelector('#form-success').style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Hubo un error. Intenta enviar un correo a nabildaiday1@gmail.com directamente.");
+            })
+            .finally(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            });
         }
-        */
     </script>
 
 </body>

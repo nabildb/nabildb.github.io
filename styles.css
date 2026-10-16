@@ -392,57 +392,34 @@ main {
     font-size: 0.95rem;
 }
 
-/* ─── SKILLS BARS ──────────────────────────────────────── */
+/* ─── STACK ────────────────────────────────────────────── */
 .skills-section {
-    background: var(--bg-subtle);
     padding: 6rem 0;
 }
 
-.skills-grid {
+.stack-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
+    gap: 1.5rem;
 }
 
-.skill-item {
-    margin-bottom: 1.5rem;
-}
-
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.6rem;
-}
-
-.skill-name {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-.skill-pct {
-    font-size: 0.85rem;
+.stack-group__title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
     font-weight: 700;
-    color: var(--accent);
+    margin-bottom: 0.4rem;
 }
 
-.skill-bar {
-    width: 100%;
-    height: 6px;
-    background: var(--border);
-    border-radius: 100px;
-    overflow: hidden;
+.stack-group__sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
-.skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-light));
-    border-radius: 100px;
-    transition: width 1.2s ease;
+.stack-group .spec-pills {
+    margin-top: 1.25rem;
 }
 
-/* ─── INTEREST / CAR ───────────────────────────────────── */
+/* ─── ABOUT ────────────────────────────────────────────── */
 .passion-section {
     padding: 7rem 0;
 }
@@ -758,6 +735,253 @@ textarea {
     opacity: 0;
 }
 
+/* ─── SHARED SECTIONS ──────────────────────────────────── */
+.section-alt {
+    background: var(--bg-subtle);
+}
+
+.section-pad {
+    padding: 7rem 0;
+}
+
+/* ─── CODE CARD ────────────────────────────────────────── */
+.code-card {
+    background: #1e1e2e;
+    border-radius: 20px;
+    padding: 2rem;
+    color: #f8f8f2;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.9;
+    box-shadow: var(--shadow-lg);
+    overflow-x: auto;
+}
+
+.code-card__dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.code-card__dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f57;
+}
+
+.code-card__dots span:nth-child(2) { background: #ffbd2e; }
+.code-card__dots span:nth-child(3) { background: #28c840; }
+
+.code-card .indent { padding-left: 1.5rem; }
+.tok-comment { color: #6272a4; }
+.tok-keyword { color: #ff79c6; }
+.tok-var { color: #8be9fd; }
+.tok-prop { color: #50fa7b; }
+.tok-str { color: #f1fa8c; }
+.tok-bool { color: #bd93f9; }
+
+.code-card__prompt {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.code-card__cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #f8f8f2;
+    animation: blink 1s step-end infinite;
+}
+
+.hero__visual {
+    position: relative;
+}
+
+.hero__visual .hero__image-badge {
+    bottom: -1.5rem;
+    left: -1rem;
+}
+
+/* ─── PROFILE CARD ─────────────────────────────────────── */
+.profile-card {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--text-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.avatar span { color: var(--accent-light); }
+
+.profile-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.profile-card__role {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.profile-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.fact {
+    padding: 1rem;
+    background: var(--bg-subtle);
+    border-radius: 12px;
+}
+
+.fact__label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+}
+
+.fact__value {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.fact__value--ok { color: #22a06b; }
+
+.profile-card .btn {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ─── PROJECTS: COMING SOON ────────────────────────────── */
+.coming-soon {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 2px dashed var(--border);
+    border-radius: 24px;
+    background: var(--bg-card);
+}
+
+.coming-soon__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.coming-soon__title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.coming-soon__text {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.coming-soon .hero__actions {
+    justify-content: center;
+}
+
+/* ─── CTA BAND ─────────────────────────────────────────── */
+.cta-band {
+    background: var(--text-primary);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.cta-band .section-label { color: var(--accent-light); }
+
+.cta-band__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.cta-band__text {
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-accent:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+/* ─── CONTACT EXTRAS ───────────────────────────────────── */
+.contact-detail__value a:hover { color: var(--accent); }
+
+.highlight-card {
+    margin-top: 2.5rem;
+    background: var(--text-primary);
+    color: #fff;
+    border: none;
+}
+
+.highlight-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.form-success {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: #f0fdf4;
+    border: 1.5px solid #22c55e;
+    border-radius: 12px;
+    color: #15803d;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-success.visible { display: block; }
+
 /* ─── HAMBURGER MENU ────────────────────────────────────── */
 .navbar__toggle {
     display: none;
@@ -808,9 +1032,12 @@ textarea {
         gap: 3rem;
     }
 
-    .skills-grid {
+    .stack-grid {
         grid-template-columns: 1fr;
-        gap: 0;
+    }
+
+    .section-pad {
+        padding: 5rem 0;
     }
 
     .contact-grid {
@@ -945,8 +1172,19 @@ textarea {
         padding: 4rem 0;
     }
 
-    .skills-section {
+    .skills-section,
+    .section-pad {
         padding: 4rem 0;
+    }
+
+    .code-card {
+        padding: 1.5rem;
+        font-size: 0.78rem;
+    }
+
+    .hero__visual .hero__image-badge {
+        position: static;
+        margin-top: 1.5rem;
     }
 
     .section-header {
@@ -1002,5 +1240,16 @@ textarea {
     .hero__actions .btn {
         width: 100%;
         justify-content: center;
+    }
+}
+/* ── Usuarios que prefieren menos movimiento ── */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

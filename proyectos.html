@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos — Nabil Daiday Boukhrisse</title>
-    <meta name="description" content="Proyectos de Nabil Daiday Boukhrisse, estudiante de Desarrollo de Aplicaciones Web. Próximamente.">
-    <meta name="theme-color" content="#F4F4F0">
+    <meta name="description" content="Proyectos de Nabil Daiday Boukhrisse: Furrly, comunidad web para encontrar mascotas perdidas, hecha con React, TypeScript, Express y PostGIS.">
+    <meta name="theme-color" content="#F1F3EF">
     <link rel="canonical" href="https://nabildb.github.io/proyectos.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Nabil Daiday Boukhrisse · Portfolio">
     <meta property="og:title" content="Proyectos — Nabil Daiday Boukhrisse">
-    <meta property="og:description" content="Proyectos de Nabil Daiday Boukhrisse, estudiante de Desarrollo de Aplicaciones Web. Próximamente.">
+    <meta property="og:description" content="Proyectos de Nabil Daiday Boukhrisse: Furrly, comunidad web para encontrar mascotas perdidas, hecha con React, TypeScript, Express y PostGIS.">
     <meta property="og:url" content="https://nabildb.github.io/proyectos.html">
     <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -41,13 +41,33 @@
             <p class="mono">Proyectos</p>
             <h1 class="display display--sm">Lo que voy <span class="accent">construyendo.</span></h1>
             <div class="about__row">
-                <div class="soon">
-                        <div>
-                            <p class="soon__title">Próximamente</p>
-                            <p>Estoy preparando mis primeros proyectos para publicarlos aquí, con código en GitHub y demo en vivo.</p>
-                        </div>
-                        <a href="https://github.com/nabildb" class="link" target="_blank" rel="noopener">Ver mi GitHub ↗</a>
+                <article class="project project--full">
+                    <p class="project__meta mono"><span class="dot" aria-hidden="true"></span>2026 · En desarrollo · Proyecto de 2.º DAW</p>
+                    <h2 class="project__title">Furrly</h2>
+                    <p class="project__desc">Comunidad web para dueños de mascotas centrada en mascotas perdidas y encontradas: avisos geolocalizados en un mapa, avistamientos que dibujan el recorrido de la mascota y un feed social con publicaciones, likes y comentarios.</p>
+                        <ul class="tags" aria-label="Tecnologías">
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>Node + Express</li>
+                            <li>Prisma</li>
+                            <li>PostgreSQL + PostGIS</li>
+                            <li>Supabase</li>
+                            <li>Vercel</li>
+                        </ul>
+                    <ul class="highlights">
+                        <li>API REST propia con Express y Prisma, desplegada como función serverless en Vercel.</li>
+                        <li>Búsqueda de avisos por radio con PostGIS y mapa interactivo con Leaflet y OpenStreetMap.</li>
+                        <li>Autenticación con Supabase Auth: la API valida el token JWT contra las claves públicas del proyecto.</li>
+                        <li>34 tests de integración contra PostgreSQL real, ejecutados en GitHub Actions en cada push.</li>
+                        <li>Migraciones de base de datos aplicadas automáticamente en cada despliegue de producción.</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="https://furrly-rouge.vercel.app" class="btn" target="_blank" rel="noopener">Ver demo ↗</a>
+                        <a href="https://github.com/nabildb/Furrly" class="link" target="_blank" rel="noopener">Código en GitHub ↗</a>
                     </div>
+                    <p class="more">Más proyectos próximamente.</p>
+                </article>
             </div>
         </section>
     </main>

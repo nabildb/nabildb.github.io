@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mí — Nabil Daiday Boukhrisse</title>
     <meta name="description" content="Conoce a Nabil Daiday Boukhrisse: estudiante de Desarrollo de Aplicaciones Web centrado en frontend y diseño de interfaces.">
+    <meta name="theme-color" content="#F4F4F0">
     <link rel="canonical" href="https://nabildb.github.io/sobre-mi.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -16,176 +17,92 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar">
-        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="navbar__links" id="navLinks">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html" class="navbar__cta">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__name">Nabil Daiday Boukhrisse</a>
+            <nav aria-label="Principal">
+                <ul class="nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
+        <section class="container hero">
+            <p class="mono">Sobre mí</p>
+            <h1 class="display display--sm">Estudio DAW y me gusta que las cosas <span class="accent">funcionen bien por dentro.</span></h1>
+            <div class="about__row">
+                <div class="prose">
+                    <p>Curso el ciclo formativo de Desarrollo de Aplicaciones Web, donde me estoy especializando en frontend: interfaces modernas, accesibles y con un diseño que se entiende sin explicaciones.</p>
+                    <p>Me fijo en los detalles. Un código ordenado y una interfaz coherente son lo que separa algo que funciona de algo que está bien hecho.</p>
+                    <p>Ahora mismo busco prácticas o un primer puesto junior en un equipo donde seguir aprendiendo y aportar desde el primer día.</p>
+                </div>
+                <dl class="facts">
+                    <div><dt class="mono">Ubicación</dt><dd>España</dd></div>
+                    <div><dt class="mono">Formación</dt><dd>CFGS Desarrollo de Aplicaciones Web</dd></div>
+                    <div><dt class="mono">Idiomas</dt><dd>Español, catalán, inglés</dd></div>
+                    <div><dt class="mono">Estado</dt><dd><span class="dot" aria-hidden="true"></span>Buscando prácticas</dd></div>
+                    <p class="facts__links">
+                        <a href="https://github.com/nabildb" class="link" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" class="link" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    </p>
+                </dl>
+            </div>
+        </section>
 
-        <!-- ── PAGE HERO ── -->
-        <div class="page-hero">
-            <span class="section-label">Mi historia</span>
-            <h1 class="page-hero__title fade-up">Sobre mí</h1>
-            <p class="page-hero__sub fade-up delay-1">Estudiante de DAW centrado en desarrollo frontend y diseño de interfaces.</p>
-        </div>
-
-        <!-- ── BIO SECTION ── -->
-        <section class="passion-section">
-            <div class="container">
-                <div class="passion-grid">
-                    <div>
-                        <span class="passion-label">¿Quién soy?</span>
-                        <h2 class="passion-title">Hola, soy Nabil —<br>estudiante de<br>desarrollo web.</h2>
-                        <p class="passion-text">
-                            Tengo una mentalidad orientada al detalle y la calidad. Creo firmemente que la tecnología, bien aplicada, puede transformar cómo las personas experimentan el mundo digital.
-                        </p>
-                        <p class="passion-text">
-                            Actualmente curso el ciclo formativo de <strong>Desarrollo de Aplicaciones Web (DAW)</strong>, donde me especializo en la creación de interfaces modernas, accesibles y con un diseño que se comunica solo.
-                        </p>
-                        <div class="spec-pills">
-                            <span class="pill">HTML5 / CSS3</span>
-                            <span class="pill">JavaScript</span>
-                            <span class="pill">Diseño UI</span>
-                            <span class="pill">Git</span>
-                            <span class="pill">MySQL</span>
-                            <span class="pill">Responsive</span>
-                        </div>
-                    </div>
-
-                    <!-- Profile card -->
-                    <div>
-                        <div class="card profile-card">
-                            <div class="avatar" aria-hidden="true">N<span>.</span></div>
-                            <h3 class="profile-card__name">Nabil Daiday Boukhrisse</h3>
-                            <p class="profile-card__role">Desarrollador Web en Formación</p>
-                            <div class="profile-facts">
-                                <div class="fact">
-                                    <div class="fact__label">Ubicación</div>
-                                    <div class="fact__value">España</div>
-                                </div>
-                                <div class="fact">
-                                    <div class="fact__label">Estado</div>
-                                    <div class="fact__value fact__value--ok">● Buscando prácticas</div>
-                                </div>
-                                <div class="fact">
-                                    <div class="fact__label">Idiomas</div>
-                                    <div class="fact__value">ES · CA · EN</div>
-                                </div>
-                                <div class="fact">
-                                    <div class="fact__label">Formación</div>
-                                    <div class="fact__value">CFGS DAW</div>
-                                </div>
+        <section class="section">
+            <div class="container section__inner">
+                <div class="section__head">
+                    <p class="mono">Método</p>
+                    <h2 class="section__title">Cómo trabajo</h2>
+                </div>
+                <div class="section__body">
+                    <ol class="steps">
+                        <li>
+                            <span class="mono">01</span>
+                            <div>
+                                <h3>Primero el móvil</h3>
+                                <p>Maqueto con HTML semántico y CSS que se adapta desde la pantalla más pequeña hacia arriba.</p>
                             </div>
-                            <a href="contacto.html" class="btn btn-primary">Contactar →</a>
-                            <a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" class="btn btn-secondary profile-card__link" target="_blank" rel="noopener">Ver LinkedIn</a>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <span class="mono">02</span>
+                            <div>
+                                <h3>Código que se puede leer</h3>
+                                <p>Estructura clara, estilos reutilizables y control de versiones con Git desde el primer commit.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="mono">03</span>
+                            <div>
+                                <h3>Accesible y rápido</h3>
+                                <p>Contraste suficiente, navegación con teclado y páginas ligeras que cargan sin esperas.</p>
+                            </div>
+                        </li>
+                    </ol>
                 </div>
             </div>
         </section>
-
-        <!-- ── APPROACH SECTION ── -->
-        <section class="section-alt section-pad">
-            <div class="container">
-                <div class="passion-grid">
-
-                    <!-- Stack card -->
-                    <div class="code-card">
-                        <div class="code-card__dots"><span></span><span></span><span></span></div>
-                        <div class="tok-comment">// stack.config</div>
-                        <div><span class="tok-keyword">export const</span> <span class="tok-var">stack</span> = {</div>
-                        <div class="indent"><span class="tok-prop">frontend</span>: [<span class="tok-str">"HTML5"</span>, <span class="tok-str">"CSS3"</span>, <span class="tok-str">"JavaScript"</span>],</div>
-                        <div class="indent"><span class="tok-prop">datos</span>: [<span class="tok-str">"MySQL"</span>],</div>
-                        <div class="indent"><span class="tok-prop">diseño</span>: [<span class="tok-str">"Figma"</span>, <span class="tok-str">"Responsive"</span>],</div>
-                        <div class="indent"><span class="tok-prop">herramientas</span>: [<span class="tok-str">"Git"</span>, <span class="tok-str">"GitHub"</span>]</div>
-                        <div>};</div>
-                    </div>
-
-                    <!-- Text side -->
-                    <div>
-                        <span class="passion-label">Cómo trabajo</span>
-                        <h2 class="passion-title">Código limpio,<br>interfaces claras.</h2>
-                        <p class="passion-text">
-                            Me centro en el <strong>desarrollo frontend</strong>: maquetación semántica con HTML, estilos mantenibles con CSS y lógica de interfaz con JavaScript, siempre pensando primero en móvil.
-                        </p>
-                        <p class="passion-text">
-                            Trabajo con <strong>control de versiones en Git</strong>, cuido la estructura del código para que sea fácil de leer y ampliar, y presto atención a la accesibilidad y al rendimiento de cada página.
-                        </p>
-                        <p class="passion-text">
-                            En el ciclo de DAW también trabajo con <strong>bases de datos relacionales (MySQL)</strong>, lo que me da una visión completa de cómo se conectan el frontend y los datos de una aplicación.
-                        </p>
-                        <div class="spec-pills">
-                            <span class="pill">Desarrollo frontend</span>
-                            <span class="pill">HTML semántico</span>
-                            <span class="pill">Mobile first</span>
-                            <span class="pill">Accesibilidad</span>
-                            <span class="pill">Bases de datos</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ── VALUES ── -->
-        <section class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Lo que me define</span>
-                    <h2 class="section-title">Mis Valores Profesionales</h2>
-                </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card__icon">🎯</div>
-                        <h3 class="card__title">Orientación al Detalle</h3>
-                        <p class="card__text">Los pequeños detalles marcan la diferencia entre algo bueno y algo excelente: código ordenado, interfaces coherentes y cada píxel en su sitio.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">📚</div>
-                        <h3 class="card__title">Aprendizaje Continuo</h3>
-                        <p class="card__text">La tecnología evoluciona rápido. Me adapto a nuevos lenguajes, frameworks y metodologías con curiosidad y disciplina.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">🤝</div>
-                        <h3 class="card__title">Trabajo en Equipo</h3>
-                        <p class="card__text">Los mejores proyectos nacen de la colaboración. Me comunico con claridad y aporto ideas desde la escucha activa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- ── FOOTER ── -->
     <footer class="footer">
-        <div class="footer__logo">N<span>.</span>Portfolio</div>
-        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
-        <ul class="footer__links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-        <p class="footer__copy">&copy; 2026 Nabil Daiday Boukhrisse. Todos los derechos reservados.</p>
+        <div class="container footer__bar">
+            <span>&copy; 2026 Nabil Daiday Boukhrisse</span>
+            <ul class="footer__links">
+                <li><a href="mailto:nabildaiday1@gmail.com">Email</a></li>
+                <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>

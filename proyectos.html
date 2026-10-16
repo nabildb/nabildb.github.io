@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos — Nabil Daiday Boukhrisse</title>
     <meta name="description" content="Proyectos de Nabil Daiday Boukhrisse, estudiante de Desarrollo de Aplicaciones Web. Próximamente.">
+    <meta name="theme-color" content="#F4F4F0">
     <link rel="canonical" href="https://nabildb.github.io/proyectos.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -16,77 +17,53 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar">
-        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="navbar__links" id="navLinks">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html" class="active">Proyectos</a></li>
-            <li><a href="contacto.html" class="navbar__cta">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__name">Nabil Daiday Boukhrisse</a>
+            <nav aria-label="Principal">
+                <ul class="nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-
-        <!-- ── PAGE HERO ── -->
-        <div class="page-hero">
-            <span class="section-label">Mi trabajo</span>
-            <h1 class="page-hero__title fade-up">Proyectos</h1>
-            <p class="page-hero__sub fade-up delay-1">Aquí irán los proyectos que muestran mi evolución como desarrollador.</p>
-        </div>
-
-        <!-- ── COMING SOON ── -->
-        <section class="section-pad">
-            <div class="container">
-                <div class="coming-soon fade-up">
-                    <div class="coming-soon__icon">🚧</div>
-                    <h2 class="coming-soon__title">Próximamente…</h2>
-                    <p class="coming-soon__text">
-                        Estoy preparando mis primeros proyectos para publicarlos aquí, con código en GitHub y demo en vivo.
-                        Mientras tanto, puedes seguir mi actividad en GitHub.
-                    </p>
-                    <div class="hero__actions">
-                        <a href="https://github.com/nabildb" class="btn btn-primary" target="_blank" rel="noopener">Ver GitHub →</a>
-                        <a href="contacto.html" class="btn btn-secondary">Contactar</a>
+        <section class="container hero">
+            <p class="mono">Proyectos</p>
+            <h1 class="display display--sm">Lo que voy <span class="accent">construyendo.</span></h1>
+            <div class="about__row">
+                <div class="soon">
+                        <div>
+                            <p class="soon__title">Próximamente</p>
+                            <p>Estoy preparando mis primeros proyectos para publicarlos aquí, con código en GitHub y demo en vivo.</p>
+                        </div>
+                        <a href="https://github.com/nabildb" class="link" target="_blank" rel="noopener">Ver mi GitHub ↗</a>
                     </div>
-                </div>
             </div>
         </section>
-
-        <!-- ── CTA BAND ── -->
-        <section class="cta-band">
-            <span class="section-label">¿Buscas a alguien en prácticas?</span>
-            <h2 class="cta-band__title">Hablemos</h2>
-            <p class="cta-band__text">Busco prácticas y un primer puesto junior en un equipo donde seguir aprendiendo y aportar desde el primer día.</p>
-            <a href="contacto.html" class="btn btn-accent">Contáctame →</a>
-        </section>
-
     </main>
 
-    <!-- ── FOOTER ── -->
     <footer class="footer">
-        <div class="footer__logo">N<span>.</span>Portfolio</div>
-        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
-        <ul class="footer__links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-        <p class="footer__copy">&copy; 2026 Nabil Daiday Boukhrisse. Todos los derechos reservados.</p>
+        <div class="container footer__cta">
+            <p class="mono">¿Hablamos?</p>
+            <a href="mailto:nabildaiday1@gmail.com" class="footer__email">nabildaiday1@gmail.com</a>
+        </div>
+        <div class="container footer__bar">
+            <span>&copy; 2026 Nabil Daiday Boukhrisse</span>
+            <ul class="footer__links">
+                <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>

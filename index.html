@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nabil Daiday Boukhrisse — Desarrollador Web Frontend</title>
     <meta name="description" content="Portfolio de Nabil Daiday Boukhrisse, estudiante de Desarrollo de Aplicaciones Web centrado en frontend. Abierto a prácticas y primer empleo.">
+    <meta name="theme-color" content="#F4F4F0">
     <link rel="canonical" href="https://nabildb.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -16,7 +17,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
     {
@@ -25,158 +26,118 @@
         "name": "Nabil Daiday Boukhrisse",
         "jobTitle": "Desarrollador Web Frontend",
         "url": "https://nabildb.github.io/",
-        "sameAs": [
-            "https://github.com/nabildb",
-            "https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/"
-        ]
+        "sameAs": ["https://github.com/nabildb", "https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/"]
     }
     </script>
 </head>
 <body>
 
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar">
-        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="navbar__links" id="navLinks">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html" class="navbar__cta">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__name">Nabil Daiday Boukhrisse</a>
+            <nav aria-label="Principal">
+                <ul class="nav">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-
-        <!-- ── HERO ── -->
-        <section class="container">
-            <div class="hero">
-                <div class="hero__content">
-                    <div class="hero__badge fade-up">✦ Abierto a prácticas y primer empleo</div>
-                    <h1 class="hero__title fade-up delay-1">
-                        Hola, soy<br><span>Nabil</span>.<br>Desarrollo web.
-                    </h1>
-                    <p class="hero__subtitle fade-up delay-2">
-                        Estudiante de Desarrollo de Aplicaciones Web (DAW) centrado en frontend: interfaces limpias,
-                        responsive y accesibles con HTML, CSS y JavaScript.
-                    </p>
-                    <div class="hero__actions fade-up delay-3">
-                        <a href="contacto.html" class="btn btn-primary">Contactar →</a>
-                        <a href="https://github.com/nabildb" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
-                    </div>
+        <section class="container hero">
+            <p class="mono">Desarrollador web · CFGS DAW · España</p>
+            <h1 class="display">Interfaces web limpias, accesibles y <span class="accent">bien hechas.</span></h1>
+            <div class="hero__row">
+                <p class="lead">Soy Nabil, estudiante de Desarrollo de Aplicaciones Web. Me centro en frontend: HTML semántico, CSS mantenible y JavaScript, pensando primero en móvil.</p>
+                <div class="actions">
+                    <a href="contacto.html" class="btn">Escríbeme</a>
+                    <a href="https://github.com/nabildb" class="link" target="_blank" rel="noopener">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" class="link" target="_blank" rel="noopener">LinkedIn ↗</a>
                 </div>
+            </div>
+            <p class="status"><span class="dot" aria-hidden="true"></span>Buscando prácticas y primer empleo junior — presencial o remoto.</p>
+        </section>
 
-                <div class="hero__visual fade-up delay-2">
-                    <div class="code-card">
-                        <div class="code-card__dots"><span></span><span></span><span></span></div>
-                        <div class="tok-comment">// portfolio.js</div>
-                        <div><span class="tok-keyword">const</span> <span class="tok-var">developer</span> = <span class="tok-str">{</span></div>
-                        <div class="indent"><span class="tok-prop">name</span>: <span class="tok-str">"Nabil Daiday Boukhrisse"</span>,</div>
-                        <div class="indent"><span class="tok-prop">role</span>: <span class="tok-str">"Frontend Developer"</span>,</div>
-                        <div class="indent"><span class="tok-prop">stack</span>: [<span class="tok-str">"HTML"</span>, <span class="tok-str">"CSS"</span>, <span class="tok-str">"JS"</span>],</div>
-                        <div class="indent"><span class="tok-prop">studying</span>: <span class="tok-str">"CFGS DAW"</span>,</div>
-                        <div class="indent"><span class="tok-prop">openToWork</span>: <span class="tok-bool">true</span></div>
-                        <div><span class="tok-str">}</span>;</div>
-                        <div class="code-card__prompt">
-                            <span class="tok-prop">$</span>
-                            <span class="code-card__cursor"></span>
+        <section class="section">
+            <div class="container section__inner">
+                <div class="section__head">
+                    <p class="mono">01</p>
+                    <h2 class="section__title">Qué hago</h2>
+                </div>
+                <div class="section__body">
+                    <div class="columns">
+                        <div class="column">
+                            <h3>Frontend</h3>
+                            <p>Maquetación semántica y responsive con HTML, CSS y JavaScript. Código ordenado y fácil de mantener.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Diseño de interfaces</h3>
+                            <p>Jerarquía visual clara y tipografía cuidada. Prototipo en Figma antes de escribir código.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Bases de datos</h3>
+                            <p>Modelado y consultas en MySQL dentro del ciclo de DAW, para entender la aplicación de punta a punta.</p>
                         </div>
                     </div>
-                    <div class="hero__image-badge">
-                        <span class="badge-icon">🎓</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container section__inner">
+                <div class="section__head">
+                    <p class="mono">02</p>
+                    <h2 class="section__title">Stack</h2>
+                </div>
+                <div class="section__body">
+                    <dl>
+                        <div class="stack-row">
+                            <dt class="mono">Uso a diario</dt>
+                            <dd>HTML5, CSS3, Flexbox y Grid, diseño responsive, Figma</dd>
+                        </div>
+                        <div class="stack-row">
+                            <dt class="mono">Reforzando</dt>
+                            <dd>JavaScript, Git y GitHub, MySQL</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="proyectos">
+            <div class="container section__inner">
+                <div class="section__head">
+                    <p class="mono">03</p>
+                    <h2 class="section__title">Proyectos</h2>
+                </div>
+                <div class="section__body">
+                    <div class="soon">
                         <div>
-                            <div class="badge-title">Buscando prácticas</div>
-                            <div class="badge-sub">DAW · España</div>
+                            <p class="soon__title">Próximamente</p>
+                            <p>Estoy preparando mis primeros proyectos para publicarlos aquí, con código en GitHub y demo en vivo.</p>
                         </div>
+                        <a href="https://github.com/nabildb" class="link" target="_blank" rel="noopener">Ver mi GitHub ↗</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ── SERVICES / SKILLS OVERVIEW ── -->
-        <section class="services-section section-alt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">En qué me centro</span>
-                    <h2 class="section-title">Mis Especialidades</h2>
-                    <p class="section-sub">Del código al diseño, me interesa crear experiencias web que sean funcionales
-                        y visualmente atractivas.</p>
-                </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card__icon">🖥️</div>
-                        <h3 class="card__title">Desarrollo Frontend</h3>
-                        <p class="card__text">Interfaces modernas y responsivas con HTML, CSS y JavaScript. Código
-                            limpio, semántico y bien estructurado.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">🎨</div>
-                        <h3 class="card__title">Diseño UI</h3>
-                        <p class="card__text">Jerarquía visual clara, tipografía cuidada y paletas de color coherentes,
-                            prototipadas en Figma antes de programar.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card__icon">⚙️</div>
-                        <h3 class="card__title">Resolución de Problemas</h3>
-                        <p class="card__text">Mentalidad analítica, aprendizaje rápido y capacidad de adaptarme a nuevas
-                            tecnologías y entornos de trabajo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── STACK ── -->
-        <section class="skills-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-label">Habilidades técnicas</span>
-                    <h2 class="section-title">Stack &amp; Herramientas</h2>
-                </div>
-                <div class="stack-grid">
-                    <div class="card stack-group">
-                        <h3 class="stack-group__title">Uso con soltura</h3>
-                        <p class="stack-group__sub">Lo que manejo en el día a día.</p>
-                        <div class="spec-pills">
-                            <span class="pill">HTML5</span>
-                            <span class="pill">CSS3</span>
-                            <span class="pill">Flexbox &amp; Grid</span>
-                            <span class="pill">Responsive design</span>
-                            <span class="pill">Figma</span>
-                        </div>
-                    </div>
-                    <div class="card stack-group">
-                        <h3 class="stack-group__title">Conozco y sigo mejorando</h3>
-                        <p class="stack-group__sub">Lo que estoy reforzando en el ciclo.</p>
-                        <div class="spec-pills">
-                            <span class="pill">JavaScript</span>
-                            <span class="pill">Git &amp; GitHub</span>
-                            <span class="pill">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- ── FOOTER ── -->
     <footer class="footer">
-        <div class="footer__logo">N<span>.</span>Portfolio</div>
-        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
-        <ul class="footer__links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-        <p class="footer__copy">&copy; 2026 Nabil Daiday Boukhrisse. Todos los derechos reservados.</p>
+        <div class="container footer__cta">
+            <p class="mono">¿Hablamos?</p>
+            <a href="mailto:nabildaiday1@gmail.com" class="footer__email">nabildaiday1@gmail.com</a>
+        </div>
+        <div class="container footer__bar">
+            <span>&copy; 2026 Nabil Daiday Boukhrisse</span>
+            <ul class="footer__links">
+                <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>

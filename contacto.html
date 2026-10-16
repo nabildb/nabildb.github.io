@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto — Nabil Daiday Boukhrisse</title>
     <meta name="description" content="Contacta con Nabil Daiday Boukhrisse para ofertas de prácticas, puestos junior o colaboraciones en desarrollo web.">
+    <meta name="theme-color" content="#F4F4F0">
     <link rel="canonical" href="https://nabildb.github.io/contacto.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -16,155 +17,79 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- ── NAVBAR ── -->
-    <nav class="navbar">
-        <a href="index.html" class="navbar__logo">N<span>.</span>Portfolio</a>
-        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="navbar__links" id="navLinks">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html" class="navbar__cta active">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="header__name">Nabil Daiday Boukhrisse</a>
+            <nav aria-label="Principal">
+                <ul class="nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-
-        <!-- ── PAGE HERO ── -->
-        <div class="page-hero">
-            <span class="section-label">¿Hablamos?</span>
-            <h1 class="page-hero__title fade-up">Contacto</h1>
-            <p class="page-hero__sub fade-up delay-1">Estoy abierto a ofertas de prácticas, puestos junior y colaboraciones.</p>
-        </div>
-
-        <!-- ── CONTACT SECTION ── -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
-
-                    <!-- LEFT: info -->
-                    <div>
-                        <h2 class="contact-info__title">Escríbeme</h2>
-                        <p class="contact-info__sub">
-                            Si tienes una oferta de prácticas, un puesto junior o simplemente quieres conocerme mejor,
-                            mándame un mensaje y te respondo lo antes posible.
-                        </p>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail__icon">📧</div>
-                            <div>
-                                <div class="contact-detail__label">Email</div>
-                                <div class="contact-detail__value"><a href="mailto:nabildaiday1@gmail.com">nabildaiday1@gmail.com</a></div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail__icon">💻</div>
-                            <div>
-                                <div class="contact-detail__label">GitHub</div>
-                                <div class="contact-detail__value"><a href="https://github.com/nabildb" target="_blank" rel="noopener">github.com/nabildb</a></div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail__icon">🔗</div>
-                            <div>
-                                <div class="contact-detail__label">LinkedIn</div>
-                                <div class="contact-detail__value"><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">Nabil Daiday Boukhrisse</a></div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail__icon">📍</div>
-                            <div>
-                                <div class="contact-detail__label">Ubicación</div>
-                                <div class="contact-detail__value">España · Presencial o remoto</div>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-detail__icon">💼</div>
-                            <div>
-                                <div class="contact-detail__label">Disponibilidad</div>
-                                <div class="contact-detail__value">Prácticas · Primer empleo junior</div>
-                            </div>
-                        </div>
-
-                        <div class="card highlight-card">
-                            <h4>¿Por qué contactarme?</h4>
-                            <p>
-                                Aporto una visión fresca, ganas de aprender y un compromiso real con cada tarea.
-                                No entrego trabajo a medias.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- RIGHT: form -->
-                    <div class="contact-form fade-up delay-1">
-                        <h3>Envíame un mensaje</h3>
-                        <form id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre</label>
-                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="motivo">Motivo</label>
-                                <select id="motivo" name="motivo" required>
-                                    <option value="">Selecciona una opción...</option>
-                                    <option value="practicas">Oferta de prácticas</option>
-                                    <option value="empleo">Oferta de empleo</option>
-                                    <option value="colaboracion">Colaboración</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" placeholder="Cuéntame en qué consiste la oferta o propuesta..." required></textarea>
-                            </div>
-                            <!-- Campo trampa contra bots (FormSubmit) -->
-                            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-                            <button type="submit" class="btn btn-primary form-submit">Enviar mensaje →</button>
-                        </form>
-                        <div class="form-success" id="formSuccess" role="status">
-                            ✅ ¡Mensaje enviado! Me pondré en contacto pronto.
-                        </div>
-                    </div>
-
-                </div>
+        <section class="container contact">
+            <div class="contact__info">
+                <p class="mono">Contacto</p>
+                <h1 class="display display--sm">¿Hablamos?</h1>
+                <p class="lead">Si tienes una oferta de prácticas, un puesto junior o quieres conocerme mejor, escríbeme y te respondo lo antes posible.</p>
+                <dl class="details">
+                    <div><dt class="mono">Email</dt><dd><a href="mailto:nabildaiday1@gmail.com">nabildaiday1@gmail.com</a></dd></div>
+                    <div><dt class="mono">GitHub</dt><dd><a href="https://github.com/nabildb" target="_blank" rel="noopener">github.com/nabildb ↗</a></dd></div>
+                    <div><dt class="mono">LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">Nabil Daiday Boukhrisse ↗</a></dd></div>
+                    <div><dt class="mono">Disponibilidad</dt><dd><span class="dot" aria-hidden="true"></span>Prácticas · primer empleo · España o remoto</dd></div>
+                </dl>
             </div>
-        </section>
 
+            <form class="form" id="contactForm">
+                <div class="form__row">
+                    <label class="field">Nombre
+                        <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
+                    </label>
+                    <label class="field">Email
+                        <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+                    </label>
+                </div>
+                <label class="field">Motivo
+                    <select name="motivo" required>
+                        <option value="">Selecciona una opción…</option>
+                        <option value="practicas">Oferta de prácticas</option>
+                        <option value="empleo">Oferta de empleo</option>
+                        <option value="colaboracion">Colaboración</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+                <label class="field">Mensaje
+                    <textarea name="mensaje" rows="5" placeholder="Cuéntame en qué consiste la oferta o propuesta" required></textarea>
+                </label>
+                <!-- Campo trampa contra bots (FormSubmit) -->
+                <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button type="submit" class="btn">Enviar mensaje</button>
+                <p class="form-success" id="formSuccess" role="status">Mensaje enviado. Te responderé pronto.</p>
+            </form>
+        </section>
     </main>
 
-    <!-- ── FOOTER ── -->
     <footer class="footer">
-        <div class="footer__logo">N<span>.</span>Portfolio</div>
-        <p class="footer__tagline">Desarrollado con precisión. Diseñado con intención.</p>
-        <ul class="footer__links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-        <p class="footer__copy">&copy; 2026 Nabil Daiday Boukhrisse. Todos los derechos reservados.</p>
+        <div class="container footer__bar">
+            <span>&copy; 2026 Nabil Daiday Boukhrisse</span>
+            <ul class="footer__links">
+                <li><a href="mailto:nabildaiday1@gmail.com">Email</a></li>
+                <li><a href="https://github.com/nabildb" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nabil-daiday-boukhrisse-04b022206/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </div>
     </footer>
 
-    <script src="main.js"></script>
     <script>
         const form = document.getElementById('contactForm');
         const success = document.getElementById('formSuccess');
@@ -172,9 +97,9 @@
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const btn = form.querySelector('.form-submit');
+            const btn = form.querySelector('.btn');
             const originalText = btn.textContent;
-            btn.textContent = 'Enviando...';
+            btn.textContent = 'Enviando…';
             btn.disabled = true;
 
             const data = Object.fromEntries(new FormData(form).entries());
